@@ -78,7 +78,7 @@ module ProtocolBuffers
           # actually read the IO so that extra bytes aren't left on the wire
           value = value.read if wire_type == 2 # LENGTH_DELIMITED
 
-          message.remember_unknown_field(tag_int, value)
+          message.remember_unknown_field(tag, value)
         end
       end
 
